@@ -46,11 +46,11 @@ html {
   html {
     font-size: 14px;
   }
-  
+
   body {
     overflow-x: hidden;
   }
-  
+
   /* Prevent horizontal scroll on mobile */
   * {
     max-width: 100%;
@@ -62,11 +62,11 @@ html {
   .hover\:scale-105:hover {
     transform: scale(1.02);
   }
-  
+
   .hover\:scale-110:hover {
     transform: scale(1.05);
   }
-  
+
   .hover\:scale-120:hover {
     transform: scale(1.1);
   }

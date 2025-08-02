@@ -32,10 +32,10 @@ const Projects = () => {
         description: 'Full-stack e-commerce application with user authentication, product catalog, shopping cart, and payment integration.',
         technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
         githubUrl: 'https://github.com/KunalOberoi',
-        liveUrl: '',
+        liveUrl: 'https://forever-rho-eight.vercel.app/',
         image: '',
-        featured: false,
-        status: 'In Progress'
+        featured: true,
+        status: 'Completed'
       },
       {
         _id: '3',
