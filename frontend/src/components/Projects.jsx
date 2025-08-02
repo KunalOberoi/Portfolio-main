@@ -21,7 +21,7 @@ const Projects = () => {
         description: 'A modern, responsive portfolio website built with React and Tailwind CSS. Features smooth animations, dark theme, and dynamic content management.',
         technologies: ['React', 'Tailwind CSS', 'Framer Motion', 'Node.js'],
         githubUrl: 'https://github.com/KunalOberoi',
-        liveUrl: 'https://portfolio-kappa-virid-54.vercel.app/',
+        liveUrl: 'https://portfolio-main-two-roan.vercel.app/',
         image: '',
         featured: true,
         status: 'Completed'
