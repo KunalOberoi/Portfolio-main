@@ -29,7 +29,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-dark-200">
+    <section id="about" className="py-16 sm:py-20 bg-dark-200">
       <motion.div
         ref={ref}
         variants={containerVariants}
@@ -37,18 +37,18 @@ const About = () => {
         animate={inView ? "visible" : "hidden"}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+        <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gradient">
             About Me
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Learn more about my journey, education, and passion for technology
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div variants={itemVariants} className="space-y-6">
-            <h3 className="text-2xl font-semibold text-white mb-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6 px-4 lg:px-0">
+            <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4">
               My Journey
             </h3>
             <p className="text-gray-300 leading-relaxed">
@@ -68,11 +68,11 @@ const About = () => {
             </p>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-dark-300 p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors duration-300">
-                <FaGraduationCap className="text-primary-400 text-3xl mb-4" />
-                <h4 className="text-lg font-semibold text-white mb-2">Education</h4>
+          <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6 px-4 lg:px-0">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6">
+              <div className="bg-dark-300 p-4 sm:p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors duration-300">
+                <FaGraduationCap className="text-primary-400 text-2xl sm:text-3xl mb-3 sm:mb-4" />
+                <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Education</h4>
                 <div className="space-y-2 text-gray-400 text-sm">
                   <div>
                     <p className="text-gray-300 font-medium">B.Tech IT from BPIT (GGSIPU)</p>
@@ -90,9 +90,9 @@ const About = () => {
               </div>
               
 
-              <div className="bg-dark-300 p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors duration-300">
-                <FaCode className="text-primary-400 text-3xl mb-4" />
-                <h4 className="text-lg font-semibold text-white mb-2">Focus</h4>
+              <div className="bg-dark-300 p-4 sm:p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors duration-300">
+                <FaCode className="text-primary-400 text-2xl sm:text-3xl mb-3 sm:mb-4" />
+                <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Focus</h4>
                 <p className="text-gray-400 text-sm">
                   <li>Full Stack Web Development (MERN Stack)</li>
                   
@@ -105,9 +105,9 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="bg-dark-300 p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors duration-300 sm:col-span-2">
-                <FaLaptopCode className="text-primary-400 text-3xl mb-4" />
-                <h4 className="text-lg font-semibold text-white mb-2">Experience</h4>
+              <div className="bg-dark-300 p-4 sm:p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors duration-300">
+                <FaLaptopCode className="text-primary-400 text-2xl sm:text-3xl mb-3 sm:mb-4" />
+                <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Experience</h4>
                 <div className="space-y-3">
                   <div>
                     <p className="text-gray-300 text-sm font-medium">MyPhysioFriend - Full Stack Developer</p>

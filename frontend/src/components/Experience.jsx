@@ -70,7 +70,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-dark-200">
+    <section id="experience" className="py-16 sm:py-20 bg-dark-200">
       <motion.div
         ref={ref}
         variants={containerVariants}
@@ -78,20 +78,20 @@ const Experience = () => {
         animate={inView ? "visible" : "hidden"}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+        <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gradient">
             Experience
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
             My professional journey and hands-on experience in the tech industry
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 bg-primary-500 h-full"></div>
+          <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-0.5 md:w-1 bg-primary-500 h-full"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp._id}
@@ -101,13 +101,13 @@ const Experience = () => {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-dark-200 z-10"></div>
+                <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-primary-500 rounded-full border-2 md:border-4 border-dark-200 z-10"></div>
 
                 {/* Content */}
-                <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
+                <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className="bg-dark-300 p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors duration-300"
+                    className="bg-dark-300 p-4 sm:p-6 rounded-lg border border-gray-700 hover:border-primary-500 transition-colors duration-300"
                   >
                     {/* Header */}
                     <div className="mb-4">
@@ -118,15 +118,15 @@ const Experience = () => {
                         </span>
                       </div>
                       
-                      <h3 className="text-xl font-bold text-white mb-1">
+                      <h3 className="text-lg sm:text-xl font-bold text-white mb-1">
                         {exp.position}
                       </h3>
                       
-                      <h4 className="text-lg font-semibold text-gray-300 mb-3">
+                      <h4 className="text-base sm:text-lg font-semibold text-gray-300 mb-3">
                         {exp.company}
                       </h4>
 
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-400">
                         <div className="flex items-center gap-1">
                           <FaCalendarAlt />
                           <span>{exp.duration}</span>
@@ -142,7 +142,7 @@ const Experience = () => {
                     <div className="mb-4">
                       <ul className="space-y-2">
                         {exp.description.map((desc, descIndex) => (
-                          <li key={descIndex} className="text-gray-300 leading-relaxed">
+                          <li key={descIndex} className="text-gray-300 leading-relaxed text-sm sm:text-base">
                             • {desc}
                           </li>
                         ))}

@@ -41,6 +41,37 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Mobile viewport fix */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  * {
+    max-width: 100%;
+  }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: scale(1.02);
+  }
+  
+  .hover\:scale-110:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover\:scale-120:hover {
+    transform: scale(1.1);
+  }
+}
+
 /* Custom animations */
 .text-gradient {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

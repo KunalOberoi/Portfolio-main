@@ -12,7 +12,7 @@ import Footer from './components/Footer.jsx';
 function App() {
   return (
     <Router>
-      <div className="App bg-dark-300 text-white min-h-screen">
+      <div className="App bg-dark-300 text-white min-h-screen overflow-x-hidden">
         <Navbar />
         <Routes>
           <Route path="/" element={

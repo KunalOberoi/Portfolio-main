@@ -93,7 +93,7 @@ const Projects = () => {
   const filters = ['All', 'Featured', 'Completed', 'In Progress'];
 
   return (
-    <section id="projects" className="py-20 bg-dark-300">
+    <section id="projects" className="py-16 sm:py-20 bg-dark-300">
       <motion.div
         ref={ref}
         variants={containerVariants}
@@ -101,22 +101,22 @@ const Projects = () => {
         animate={inView ? "visible" : "hidden"}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+        <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gradient">
             Projects
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Some of my recent work and personal projects
           </p>
         </motion.div>
 
         {/* Filter Buttons */}
-        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4 mb-12">
+        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4">
           {filters.map((filterItem) => (
             <button
               key={filterItem}
               onClick={() => setFilter(filterItem)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors duration-300 ${
+              className={`px-4 sm:px-6 py-2 rounded-full font-medium transition-colors duration-300 text-sm sm:text-base ${
                 filter === filterItem
                   ? 'bg-primary-600 text-white'
                   : 'bg-dark-200 text-gray-400 hover:text-white hover:bg-dark-100'
@@ -128,7 +128,7 @@ const Projects = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project._id}
@@ -137,20 +137,20 @@ const Projects = () => {
               className="bg-dark-200 rounded-lg overflow-hidden border border-gray-700 hover:border-primary-500 transition-colors duration-300"
             >
               {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary-500/20 to-purple-500/20 flex items-center justify-center">
+              <div className="h-40 sm:h-48 bg-gradient-to-br from-primary-500/20 to-purple-500/20 flex items-center justify-center relative">
                 {project.featured && (
-                  <div className="absolute top-4 left-4 bg-primary-600 text-white px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-primary-600 text-white px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
                     <FaStar />
                     Featured
                   </div>
                 )}
-                <FaCode className="text-6xl text-primary-400/50" />
+                <FaCode className="text-4xl sm:text-6xl text-primary-400/50" />
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-white">
+                  <h3 className="text-lg sm:text-xl font-bold text-white">
                     {project.title}
                   </h3>
                   <span className={`px-2 py-1 rounded text-xs font-medium ${
@@ -164,7 +164,7 @@ const Projects = () => {
                   </span>
                 </div>
 
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-300 mb-4 leading-relaxed text-sm sm:text-base">
                   {project.description}
                 </p>
 

@@ -25,9 +25,9 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Animation */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-56 h-56 sm:w-96 sm:h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <motion.div
@@ -36,11 +36,11 @@ const Hero = () => {
         animate="visible"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10"
       >
-        <motion.div variants={itemVariants} className="mb-8">
-          <div className="w-48 h-48 mx-auto mb-8 relative">
+        <motion.div variants={itemVariants} className="mb-6 sm:mb-8">
+          <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8 relative">
             <div className="w-full h-full rounded-full bg-gradient-to-r from-primary-500 to-purple-600 p-1">
               <div className="w-full h-full rounded-full bg-dark-300 flex items-center justify-center">
-                <FaCode className="text-6xl text-primary-400" />
+                <FaCode className="text-3xl sm:text-4xl md:text-6xl text-primary-400" />
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ const Hero = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 px-4"
         >
           Hi, I'm{' '}
           <span className="text-gradient">
@@ -58,14 +58,14 @@ const Hero = () => {
 
         <motion.h2
           variants={itemVariants}
-          className="text-2xl md:text-3xl text-gray-300 mb-8"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 sm:mb-8 px-4"
         >
           Full Stack Developer & IT Student
         </motion.h2>
 
         <motion.p
           variants={itemVariants}
-          className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4"
         >
           Passionate about creating innovative web solutions using the MERN stack. 
           Currently pursuing B.Tech in Information Technology with hands-on experience 
@@ -74,13 +74,13 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 px-4"
         >
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2"
+            className="w-full sm:w-auto bg-primary-600 hover:bg-primary-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-colors duration-300 flex items-center justify-center gap-2"
           >
             Get In Touch
           </motion.a>
@@ -91,7 +91,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="border border-primary-600 text-primary-400 hover:bg-primary-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2"
+            className="w-full sm:w-auto border border-primary-600 text-primary-400 hover:bg-primary-600 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-colors duration-300 flex items-center justify-center gap-2"
           >
             <FaDownload />
             Download Resume
@@ -100,7 +100,7 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex items-center justify-center gap-6"
+          className="flex items-center justify-center gap-4 sm:gap-6"
         >
           <motion.a
             href="https://github.com/KunalOberoi"
@@ -110,7 +110,7 @@ const Hero = () => {
             whileTap={{ scale: 0.9 }}
             className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
           >
-            <FaGithub size={32} />
+            <FaGithub size={28} className="sm:w-8 sm:h-8" />
           </motion.a>
           
           <motion.a
@@ -121,7 +121,7 @@ const Hero = () => {
             whileTap={{ scale: 0.9 }}
             className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
           >
-            <FaLinkedin size={32} />
+            <FaLinkedin size={28} className="sm:w-8 sm:h-8" />
           </motion.a>
         </motion.div>
       </motion.div>
